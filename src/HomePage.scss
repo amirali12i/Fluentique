@@ -1,0 +1,250 @@
+.homepage {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; // changed to flex-start to allow footer to sit at the bottom
+  min-height: 100vh; // ensure the homepage takes up at least the full height of the viewport
+  padding-top: 20px;
+  background: linear-gradient(to right, #6dd5ed, #2193b0); // example gradient background
+
+  .top-right-nav {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 20px;
+    
+    .login-button {
+      font-weight: bold;
+      background-color: #4caf50; // a more vibrant green
+      color: white;
+      padding: 10px 20px;
+      border-radius: 5px;
+      text-decoration: none;
+
+      &:hover {
+        background-color: #388e3c; // a darker shade of green for hover effect
+      }
+    }
+  }
+
+  .main-content {
+    text-align: center;
+    margin-top: 100px;
+    opacity: 0;
+    animation: fadeIn 2s ease 2s forwards;
+
+    .headline {
+      font-size: 65px; // larger font size for emphasis
+      color: #fff; // white color for better contrast against the background
+      font-weight: bold;
+      margin-bottom: 0.5rem; // space between headline and subtitle
+    }
+
+    .subtitle {
+      font-size: 1.5rem; // smaller than headline but still prominent
+      color: #fff;
+      margin-bottom: 2rem; // space between subtitle and any content that follows
+    }
+
+    .highlight {
+      color: #ffeb3b; // a bright color for highlighting
+      font-weight: bold;
+    }
+  }
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: #333; // dark footer for contrast
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+}
+
+
+// Keyframes for the fade-in effect
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+.language-description {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  text-align: center;
+  padding: 20px;
+  visibility: hidden;
+  font-size: 30px;
+  margin-top: 40px;
+}
+
+// This will be added when the component is in the viewport
+.language-description.visible {
+  opacity: 1;
+  transform: translateY(0);
+  visibility: visible;
+  animation: typing 3s steps(30), fadeIn 0.5s forwards;
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.adventures-section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 40px; // Adjust as needed
+}
+
+.adventure-item {
+  // ... existing styles ...
+  cursor: pointer; // Indicates the item is interactive
+
+  &:hover {
+    .adventure-text {
+      color: #FFD700; // Gold color on hover for emphasis
+      transform: scale(1.1); // Slightly enlarges the text on hover
+    }
+
+    .responsive-image {
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); // Adds shadow to the image for depth
+      transform: translateY(-5px); // Slightly raises the image on hover
+    }
+  }
+}
+
+// Adding a pulsing animation to images to draw attention
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: none;
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: none;
+  }
+}
+
+.responsive-image {
+  // ... existing styles ...
+  animation: pulse 2s infinite; // Apply the pulse animation
+}
+
+// Making the text fade in with a typing effect as if it's being written
+@keyframes typeWriter {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+.adventure-text {
+  // ... existing styles ...
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid #601ef6; // Simulates the cursor
+  width: 0;
+  animation: typeWriter 4s steps(40) 1s forwards, fadeIn 2s 5s forwards; // Waits 1s, types for 4s, fades in for 2s after 5s
+}
+.image-text-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 40px 0;
+}
+
+.image-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 30px 0;
+  margin-left: 40px;
+
+  .responsive-image {
+    width: 400px;
+    height: auto;
+    border-radius: 3px;
+  }
+
+  p {
+    font: sans-serif;
+    font-size: 30px;
+    margin: 20px;
+    color: #601ef6;
+    font-weight: bold;
+  }
+}
+
+.big-line {
+  font-size: 45px;
+  color: purple;
+  font-family: 'Neon', sans-serif; // Ensure you have this font or choose a similar one
+  text-align: left;
+  margin-left: 30px;
+  opacity: 0;
+  animation: fadeIn 2s ease-in-out forwards;
+  animation-delay: 2s; 
+  font-weight: bold;
+}
+
+.counter {
+  text-align: center;
+  font-size: 30px;
+  color: #fff; // Default text color
+  opacity: 0;
+  animation: countUp 3s ease-in-out forwards, fadeIn 2s ease-in-out forwards;
+  animation-delay: 3s; // Adjust based on when you want it to appear
+  margin-bottom: 200px;
+  font-weight: bold;
+  font-size: 40px;
+
+  span {
+    color: neon; // Adjust the neon color
+    font-weight: bold;
+  }
+}
+
+// Reuse the fadeIn animation from earlier or define it if not already defined
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes countUp {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.its-free {
+  font-weight: bold;
+  font-size: 32px;
+  align-items: center;
+  color: #dc3769;
+  margin-top: 120px;
+}
+
+.the-emojis {
+  font-size: 50px;
+}

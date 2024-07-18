@@ -1,0 +1,54 @@
+.language-selector {
+  display: flex;
+  overflow-x: auto;
+  margin-top: 50px;
+
+  .language-option {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 20px;
+    text-decoration: none;
+    transition: transform 0.3s;
+
+    img[src*='62268/spain-flag-emoji-clipart-xl.png'] {
+      width: 70px; // 3% of the viewport's width
+      height: 50px; // same as width to maintain the aspect ratio
+      object-fit: contain;
+      margin-bottom: 5px;
+      size: 25px;
+    }
+
+    img[src*='em-content.zobj.net/source/toss-face/381/flag-france_1f1eb-1f1f7.png'] {
+      width: 70px; // 3% of the viewport's width
+      height: 50px; // same as width to maintain the aspect ratio
+      object-fit: contain;
+      margin-bottom: 5px;
+      size: 26px;
+    }
+
+    img[src*='62383/germany-flag-emoji-clipart-md.png'] {
+      width: 70px; // 3% of the viewport's width
+      height: 50px; // same as width to maintain the aspect ratio
+      object-fit: contain;
+      margin-bottom: 5px;
+      size: 25px;
+    }
+      
+    img[src*='256x256/it.png'] {
+      width: 70px; // 3% of the viewport's width
+      height: 50px; // same as width to maintain the aspect ratio
+      object-fit: contain;
+      margin-bottom: 5px;
+      size: 23px;
+    }
+    &:hover {
+      transform: scale(1.1);
+    }
+
+    .language-name {
+      font-weight: bold;
+      color: #4a4a4a; // or your chosen color
+    }
+  }
+}

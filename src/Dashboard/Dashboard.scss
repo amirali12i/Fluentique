@@ -1,0 +1,108 @@
+$primary-color: #6dd5ed;
+$accent-color: #2193b0;
+$text-color: #333;
+$background-color: #fff;
+
+.dashboard {
+  background-color: $background-color;
+  color: $text-color;
+
+  header, footer {
+    background-color: $primary-color;
+    color: $background-color;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .navbar {
+    ul {
+      display: flex;
+      list-style-type: none;
+      justify-content: space-around;
+      padding: 0;
+
+      li {
+        a {
+          color: $text-color;
+          text-decoration: none;
+          &:hover {
+            color: $accent-color;
+          }
+        }
+      }
+    }
+  }
+
+  .progress-overview, .next-lessons, .achievements {
+    margin: 20px 0;
+  }
+
+  .lesson-card, .achievement-card {
+    border: 1px solid $accent-color;
+    margin: 10px;
+    padding: 15px;
+    border-radius: 5px;
+
+    &:hover {
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+  }
+  
+  // Additional styles...
+}
+.sidebar {
+  width: 250px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  background-color: #f4f5f7;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+  
+  .nav-item {
+    width: 100%;
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #333;
+    
+    &:hover, &.active {
+      background-color: #dedede;
+    }
+
+    .icon {
+      margin-right: 10px;
+    }
+  }
+}
+
+.dashboard-content {
+  margin-left: 250px; // Sidebar width considered
+  padding: 20px;
+  background-color: #fff;
+  min-height: calc(100vh - 50px); // Header height considered
+
+  .section {
+    margin-bottom: 20px;
+  }
+
+  .unit-section {
+    // styles for unit section
+  }
+
+  .premium-ad-section {
+    // styles for premium ad section
+  }
+
+  .leaderboard-section {
+    // styles for leaderboard section
+  }
+
+  .daily-quests-section {
+    // styles for daily quests section
+  }
+}

@@ -1,0 +1,19 @@
+.navbar {
+  background-color: #fff; // Adjust to match the navbar color in the image
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); // Subtle shadow below the bar
+  padding: 0.5rem 1rem;
+
+  .nav-item {
+    display: inline-block;
+    margin-right: 20px; // Space between nav items
+
+    &:hover {
+      color: #007bff; // Hover effect
+    }
+  }
+
+  .nav-logo {
+    font-weight: bold;
+    font-size: 1.5rem;
+  }
+}

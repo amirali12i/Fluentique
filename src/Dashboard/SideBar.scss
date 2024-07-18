@@ -1,0 +1,21 @@
+.sidebar {
+  width: 250px; // Adjust width as needed
+  background-color: #fff; // Adjust to match the sidebar color in the image
+  padding: 1rem;
+  height: 100vh; // Full height
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); // Subtle shadow on the right
+
+  .menu-item {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 0;
+    
+    .icon {
+      margin-right: 10px; // Space between icon and label
+    }
+    
+    &:hover {
+      background-color: #f2f2f2; // Hover effect
+    }
+  }
+}

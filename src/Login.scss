@@ -1,0 +1,113 @@
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f4f4f4;
+
+  .form-container {
+    padding: 2rem;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 320px;
+    text-align: center;
+
+    h2 {
+      margin-bottom: 1rem;
+      color: #333;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+
+      .input-wrapper {
+        position: relative;
+        input {
+          width: 300px;
+          padding: 0.75rem;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+
+          &:focus {
+            border-color: #007bff;
+            outline: none;
+            box-shadow: 0 0 0 2px rgba(0,123,255,0.25);
+          }
+        }
+
+        a {
+          text-decoration: none;
+          color: #007bff;
+          font-size: 0.9rem;
+          position: absolute;
+          right: 0.75rem;
+          top: 0.75rem;
+        }
+      }
+
+      .login-button {
+        padding: 0.75rem;
+        margin-top: 1rem;
+        color: #fff;
+        background-color: #007bff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-weight: bold;
+        transition: background-color 0.3s;
+
+        &:hover {
+          background-color: darken(#007bff, 10%);
+        }
+      }
+
+      .divider-or {
+        margin: 1rem 0;
+        position: relative;
+        border-top: 1px solid #ccc;
+        &::before {
+          content: 'OR';
+          display: block;
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%);
+          background-color: #fff;
+          padding: 0 10px;
+          color: #888;
+        }
+      }
+
+      .social-login {
+        display: flex;
+        justify-content: center;
+        gap: 0.5rem;
+        button {
+          padding: 0.5rem 1rem;
+          border: none;
+          background: none;
+          cursor: pointer;
+          transition: opacity 0.3s;
+          &:hover {
+            opacity: 0.7;
+          }
+        }
+      }
+    }
+
+    .signup-link {
+      margin-top: 1rem;
+      a {
+        color: #007bff;
+        text-decoration: none;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}

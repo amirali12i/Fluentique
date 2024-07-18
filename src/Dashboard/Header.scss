@@ -1,0 +1,46 @@
+.header {
+  background: #EEEEEE;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+  .logo {
+    font-size: 24px;
+    color: #D32F2F;
+  }
+
+  .language-switch {
+    position: relative;
+    cursor: pointer;
+
+    .flag-icon {
+      width: 24px;
+      height: auto;
+    }
+
+    .level-dropdown {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background: #FFFFFF;
+      box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+      border-radius: 4px;
+      width: 200px;
+      display: none;
+
+      .level-option {
+        padding: 10px;
+        &:hover {
+          background-color: #F5F5F5;
+        }
+      }
+    }
+
+    &:hover .level-dropdown {
+      display: block;
+    }
+  }
+
+  // Additional styles for "Change Language" and other elements
+}

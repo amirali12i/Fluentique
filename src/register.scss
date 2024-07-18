@@ -1,0 +1,66 @@
+.register-container {
+  max-width: 350px;
+  margin: 60px auto;
+  padding: 40px;
+  background-color: #fff;
+  border-radius: 6px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+
+  h2 {
+    font-size: 24px; // Adjust to match the screenshot
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: 400; // Normal font weight for the title
+  }
+
+  input {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 10px; // Less space between input fields
+    border: 1px solid #dcdcdc; // Lighter border color to match the screenshot
+    border-radius: 4px;
+    font-size: 16px; // Standard font size for input
+    box-sizing: border-box;
+
+    &:hover,
+    &:focus {
+      border-color: #a3a3a3; // A lighter shade for border focus
+      outline: none; // Remove default focus outline
+    }
+  }
+
+  .action-button {
+    width: 100%;
+    padding: 15px 0;
+    margin-bottom: 20px;
+    background-color: #007bff; // Button color to match the screenshot
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px; // Adjust to match the screenshot
+    font-weight: 500; // Medium font weight for button text
+    text-transform: uppercase; // Uppercase button text
+    cursor: pointer;
+    transition: background-color 0.2s; // Smooth transition for hover effect
+
+    &:hover {
+      background-color: darken(#007bff, 10%); // Darken the button color slightly on hover
+    }
+  }
+
+  .alternative-options {
+    margin: 20px 0;
+    font-size: 14px;
+    color: #6c757d; // A medium gray for text
+
+    a {
+      color: #007bff; // Link color to match the screenshot
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
