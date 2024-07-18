@@ -1,0 +1,10 @@
+.sign-up-form .form-group input {
+  padding: 8px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.sign-up-form .form-group input:hover {
+  background-color: #f0f0f0;
+}

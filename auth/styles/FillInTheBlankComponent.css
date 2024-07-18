@@ -1,0 +1,21 @@
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0px rgba(0, 123, 255, 0.5);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(0, 123, 255, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0px rgba(0, 123, 255, 0);
+  }
+}
+
+.sentence {
+  font-size: 16px;
+  padding: 20px;
+}
+
+.blank {
+  border: 2px solid #007BFF; /* Blue border */
+  animation: pulse 2s infinite;
+}

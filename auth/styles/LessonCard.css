@@ -1,0 +1,41 @@
+.lesson-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  margin: 20px;
+  display: flex;
+  max-width: 300px;
+}
+
+.lesson-image {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+}
+
+.lesson-content {
+  padding: 10px;
+}
+
+.lesson-title {
+  margin: 0;
+  color: #333;
+}
+
+.lesson-description {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.start-lesson-btn {
+  background-color: #00A4EF;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.start-lesson-btn:hover {
+  background-color: #007BAA;
+}
